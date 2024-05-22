@@ -36,7 +36,7 @@ class Pruner:
 
         for name, module in self.net.named_modules():
             if isinstance(module, nn.Conv2d):
-                if name != "outc.conv":  # don't hook final conv module
+                if name != "outconv.conv":  # don't hook final conv module
                     module.register_backward_hook(backward_hook_fn)
                     module.register_forward_hook(forward_hook_fn)
                 self.convs.append(module)

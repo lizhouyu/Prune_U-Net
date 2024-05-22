@@ -1,0 +1,214 @@
+
+    Starting training:
+        Epochs: 50
+        Batch size: 4
+        Learning rate: 0.0001
+        Training size: 4077
+        Validation size: 504
+        Checkpoints: True
+        CUDA: True
+    
+Starting epoch 1/50.
+Epoch finished ! Loss: 0.14550495244926293
+Validation Dice Coeff: 0.6642870617397293
+Checkpoint 1 saved !
+Best Checkpoint saved !
+Starting epoch 2/50.
+Epoch finished ! Loss: 0.13956038513866628
+Validation Dice Coeff: 0.6061296851673367
+Checkpoint 2 saved !
+Starting epoch 3/50.
+Epoch finished ! Loss: 0.13747730217408047
+Validation Dice Coeff: 0.7403096503806673
+Checkpoint 3 saved !
+Best Checkpoint saved !
+Starting epoch 4/50.
+Epoch finished ! Loss: 0.13450813520428362
+Validation Dice Coeff: 0.6199192747793518
+Checkpoint 4 saved !
+Starting epoch 5/50.
+Epoch finished ! Loss: 0.13209159065906925
+Validation Dice Coeff: 0.6381043828623054
+Checkpoint 5 saved !
+Starting epoch 6/50.
+Epoch finished ! Loss: 0.1300100170392045
+Validation Dice Coeff: 0.6446011294218296
+Checkpoint 6 saved !
+Starting epoch 7/50.
+Epoch finished ! Loss: 0.12871373128461172
+Validation Dice Coeff: 0.6143899613927932
+Checkpoint 7 saved !
+Starting epoch 8/50.
+Epoch finished ! Loss: 0.12888404312878227
+Validation Dice Coeff: 0.5244079999823736
+Checkpoint 8 saved !
+Starting epoch 9/50.
+Epoch finished ! Loss: 0.1262152951109313
+Validation Dice Coeff: 0.6101392832256487
+Checkpoint 9 saved !
+Starting epoch 10/50.
+Epoch finished ! Loss: 0.12476941499825286
+Validation Dice Coeff: 0.5452860111452457
+Checkpoint 10 saved !
+Starting epoch 11/50.
+Epoch finished ! Loss: 0.12392365621429814
+Validation Dice Coeff: 0.682708735363434
+Checkpoint 11 saved !
+Starting epoch 12/50.
+Epoch finished ! Loss: 0.1248066354052296
+Validation Dice Coeff: 0.5898855805523859
+Checkpoint 12 saved !
+Starting epoch 13/50.
+Epoch finished ! Loss: 0.12191149696016944
+Validation Dice Coeff: 0.6815784602491972
+Checkpoint 13 saved !
+Starting epoch 14/50.
+Epoch finished ! Loss: 0.12026005664459771
+Validation Dice Coeff: 0.7054792330442766
+Checkpoint 14 saved !
+Starting epoch 15/50.
+Epoch finished ! Loss: 0.12030512792407107
+Validation Dice Coeff: 0.6078900617873981
+Checkpoint 15 saved !
+Starting epoch 16/50.
+Epoch finished ! Loss: 0.11945174369839497
+Validation Dice Coeff: 0.7325981951721066
+Checkpoint 16 saved !
+Starting epoch 17/50.
+Epoch finished ! Loss: 0.11956741905531112
+Validation Dice Coeff: 0.7233508955419647
+Checkpoint 17 saved !
+Starting epoch 18/50.
+Epoch finished ! Loss: 0.11758778821370869
+Validation Dice Coeff: 0.6776692461624223
+Checkpoint 18 saved !
+Starting epoch 19/50.
+Epoch finished ! Loss: 0.11555867076837494
+Validation Dice Coeff: 0.6855894830699342
+Checkpoint 19 saved !
+Starting epoch 20/50.
+Epoch finished ! Loss: 0.1180715234353974
+Validation Dice Coeff: 0.6686478811575183
+Checkpoint 20 saved !
+Starting epoch 21/50.
+Epoch finished ! Loss: 0.11480825147684047
+Validation Dice Coeff: 0.6935219410094591
+Checkpoint 21 saved !
+Starting epoch 22/50.
+Epoch finished ! Loss: 0.11252704524883518
+Validation Dice Coeff: 0.692160424218166
+Checkpoint 22 saved !
+Starting epoch 23/50.
+Epoch finished ! Loss: 0.11470318506139442
+Validation Dice Coeff: 0.6770686716524513
+Checkpoint 23 saved !
+Starting epoch 24/50.
+Epoch finished ! Loss: 0.11439606002587911
+Validation Dice Coeff: 0.6964810665472781
+Checkpoint 24 saved !
+Starting epoch 25/50.
+Epoch finished ! Loss: 0.1115916569141348
+Validation Dice Coeff: 0.7449827238417354
+Checkpoint 25 saved !
+Best Checkpoint saved !
+Starting epoch 26/50.
+Epoch finished ! Loss: 0.1109317787574558
+Validation Dice Coeff: 0.6688074460540943
+Checkpoint 26 saved !
+Starting epoch 27/50.
+Epoch finished ! Loss: 0.11242521456370817
+Validation Dice Coeff: 0.705697102210503
+Checkpoint 27 saved !
+Starting epoch 28/50.
+Epoch finished ! Loss: 0.11006073893096069
+Validation Dice Coeff: 0.5586334699794615
+Checkpoint 28 saved !
+Starting epoch 29/50.
+Epoch finished ! Loss: 0.11077259353715867
+Validation Dice Coeff: 0.6167814016427522
+Checkpoint 29 saved !
+Starting epoch 30/50.
+Epoch finished ! Loss: 0.1094143196669957
+Validation Dice Coeff: 0.6512852187644814
+Checkpoint 30 saved !
+Starting epoch 31/50.
+Epoch finished ! Loss: 0.10828490334482777
+Validation Dice Coeff: 0.6877241040904379
+Checkpoint 31 saved !
+Starting epoch 32/50.
+Epoch finished ! Loss: 0.10838663535133673
+Validation Dice Coeff: 0.691835157100387
+Checkpoint 32 saved !
+Starting epoch 33/50.
+Epoch finished ! Loss: 0.10839643137086788
+Validation Dice Coeff: 0.6769695746960972
+Checkpoint 33 saved !
+Starting epoch 34/50.
+Epoch finished ! Loss: 0.10737161290815188
+Validation Dice Coeff: 0.6764728500517782
+Checkpoint 34 saved !
+Starting epoch 35/50.
+Epoch finished ! Loss: 0.10783858304198668
+Validation Dice Coeff: 0.6236121504682597
+Checkpoint 35 saved !
+Starting epoch 36/50.
+Epoch finished ! Loss: 0.10775220498437167
+Validation Dice Coeff: 0.7500365446089556
+Checkpoint 36 saved !
+Best Checkpoint saved !
+Starting epoch 37/50.
+Epoch finished ! Loss: 0.10586130495923522
+Validation Dice Coeff: 0.7399034652086902
+Checkpoint 37 saved !
+Starting epoch 38/50.
+Epoch finished ! Loss: 0.10648612680175425
+Validation Dice Coeff: 0.738268344227642
+Checkpoint 38 saved !
+Starting epoch 39/50.
+Epoch finished ! Loss: 0.10691525125412349
+Validation Dice Coeff: 0.6949418959852586
+Checkpoint 39 saved !
+Starting epoch 40/50.
+Epoch finished ! Loss: 0.10698773538995775
+Validation Dice Coeff: 0.7403679826425794
+Checkpoint 40 saved !
+Starting epoch 41/50.
+Epoch finished ! Loss: 0.10496189060369915
+Validation Dice Coeff: 0.6533194417136878
+Checkpoint 41 saved !
+Starting epoch 42/50.
+Epoch finished ! Loss: 0.1058450171213185
+Validation Dice Coeff: 0.727607041077846
+Checkpoint 42 saved !
+Starting epoch 43/50.
+Epoch finished ! Loss: 0.10556115541661508
+Validation Dice Coeff: 0.7065756734872991
+Checkpoint 43 saved !
+Starting epoch 44/50.
+Epoch finished ! Loss: 0.1045488994730774
+Validation Dice Coeff: 0.6498888824791483
+Checkpoint 44 saved !
+Starting epoch 45/50.
+Epoch finished ! Loss: 0.10644443980323345
+Validation Dice Coeff: 0.6571454269055214
+Checkpoint 45 saved !
+Starting epoch 46/50.
+Epoch finished ! Loss: 0.10510816333072133
+Validation Dice Coeff: 0.6963772065275358
+Checkpoint 46 saved !
+Starting epoch 47/50.
+Epoch finished ! Loss: 0.10411939531498923
+Validation Dice Coeff: 0.706420929857574
+Checkpoint 47 saved !
+Starting epoch 48/50.
+Epoch finished ! Loss: 0.10475782296321746
+Validation Dice Coeff: 0.7320935985973782
+Checkpoint 48 saved !
+Starting epoch 49/50.
+Epoch finished ! Loss: 0.10361362618150001
+Validation Dice Coeff: 0.6768311997901479
+Checkpoint 49 saved !
+Starting epoch 50/50.
+Epoch finished ! Loss: 0.10483366305153358
+Validation Dice Coeff: 0.7476257479241264
+Checkpoint 50 saved !

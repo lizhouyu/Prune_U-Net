@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 from torch import optim
+from torch.utils.data import DataLoader
+
 import numpy as np
 
 import os
@@ -12,7 +14,8 @@ from tqdm import tqdm
 from finetune import finetune
 from eval import eval_net
 from unet import UNet
-from utils import get_ids, split_ids, split_train_val, get_imgs_and_masks, batch, get_logger, get_save_dir
+from utils.dataset import UNetDataset 
+
 
 
 def get_args():
@@ -28,11 +31,7 @@ def get_args():
     parser.add_option('-g', '--gpu', action='store_true', dest='gpu',
                       default=False, help='use cuda')
     parser.add_option('-l', '--load', dest='load',
-                      default="MODEL.pth", help='load file model')
-    parser.add_option('-c', '--channel_txt', dest='channel_txt',
-                      default="model_channels.txt", help='load channel txt')
-    parser.add_option('-s', '--scale', dest='scale', type='float',
-                      default=0.5, help='downscaling factor of the images')
+                      default="checkpoints/best.pt", help='load file model')
     parser.add_option('-r', '--lr', dest='lr', type='float',
                       default=0.1, help='learning rate for finetuning')
     parser.add_option('-i', '--iters', dest='iters', type='int',
@@ -50,22 +49,20 @@ if __name__ == '__main__':
     # Book-keeping & paths
     args = get_args()
 
-    dir_img = 'data/train/'
-    dir_mask = 'data/train_masks/'
-    dir_checkpoint = 'save/'
-    splitfile = "data/trainval.json"
-
-    runname = args.name
-    save_path = os.path.join(dir_checkpoint, runname)
-    save_dir = get_save_dir(save_path, runname, training=False)  # unique save dir
-    log = get_logger(save_dir, runname)  # logger
+    train_im_folder_path = '/mnt/data/zli85/github/OECModelRetraining/pilot_study/data_drift_existence/cloud_detection/unet/train_tao_unet_cloud/tao_experiments/data/320/train/subscenes'
+    train_mask_folder_path = '/mnt/data/zli85/github/OECModelRetraining/pilot_study/data_drift_existence/cloud_detection/unet/train_tao_unet_cloud/tao_experiments/data/320/train/masks'
+    val_im_folder_path = '/mnt/data/zli85/github/OECModelRetraining/pilot_study/data_drift_existence/cloud_detection/unet/train_tao_unet_cloud/tao_experiments/data/320/val/subscenes'
+    val_mask_folder_path = '/mnt/data/zli85/github/OECModelRetraining/pilot_study/data_drift_existence/cloud_detection/unet/train_tao_unet_cloud/tao_experiments/data/320/val/masks'
+    dir_checkpoint = 'checkpoints/'
+    save_dir = os.path.join(dir_checkpoint, 'prune')
+    os.makedirs(save_dir, exist_ok=True)
+    
+    log = get_logger(save_dir, 'prune')  # logger
     log.info('Args: {}'.format(json.dumps({"batch_size": args.batch_size,
                                            "taylor_batches": args.taylor_batches,
                                            "prune_channels": args.prune_channels,
                                            "gpu": args.gpu,
                                            "load": args.load,
-                                           "channel_txt": args.channel_txt,
-                                           "scale": args.scale,
                                            "lr": args.lr,
                                            "iters": args.iters,
                                            "epochs": args.epochs,
@@ -73,23 +70,15 @@ if __name__ == '__main__':
                                           indent=4, sort_keys=True)))
 
     # Dataset
-    if not os.path.exists(splitfile):  # Our constant datasplit
-        ids = get_ids(dir_img)  # [file1, file2]
-        ids = split_ids(ids)  # [(file1, 0), (file1, 1), (file2, 0), ...]
-        iddataset = split_train_val(ids, 0.2, splitfile)
-        log.info("New split dataset")
+    train_dataset = UNetDataset(im_folder_path=train_im_folder_path, mask_folder_path=train_mask_folder_path, format='image')
+    val_dataset = UNetDataset(im_folder_path=val_im_folder_path, mask_folder_path=val_mask_folder_path, format='image')
 
-    else:
-        with open(splitfile) as f:
-            iddataset = json.load(f)
-        log.info("Load split dataset")
-
-    train = get_imgs_and_masks(iddataset['train'], dir_img, dir_mask, args.scale)
-    val = get_imgs_and_masks(iddataset['val'], dir_img, dir_mask, args.scale)
+    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
+    val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=False, num_workers=4)
 
     # Model Initialization
-    net = UNet(n_channels=3, n_classes=1, f_channels=args.channel_txt)
-    log.info("Built model using {}...".format(args.channel_txt))
+    net = UNet(in_channels=3, out_channels=1)
+    log.info("Built model...")
     if args.gpu:
         net.cuda()
     if args.load:
