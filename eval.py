@@ -28,7 +28,7 @@ def eval_net(net, dataloader, gpu=False):
     tot = 0
     with torch.no_grad(), tqdm(total=len(dataloader)) as progress_bar:
         for batch_idx, (imgs, true_masks) in enumerate(dataloader):
-            if gpu:
+            if gpu and torch.cuda.is_available():
                 imgs = imgs.cuda()
 
             masks_pred = net(imgs)[0]

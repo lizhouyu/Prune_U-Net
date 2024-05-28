@@ -2,7 +2,8 @@ import onnx
 import onnxruntime
 import numpy as np
 import cv2
-import tensorrt
+# import tensorrt
+from PIL import Image
 
 subscene_image_path = "subscene.png"
 mask_image_path = "mask.png"
@@ -16,9 +17,12 @@ mask_image = np.array(mask_image, dtype=np.float32)
 subscene_image = np.transpose(subscene_image, (2, 0, 1))
 # unsqueeze to add batch dimension
 subscene_image = np.expand_dims(subscene_image, axis=0)
+# turn subscene into 0-1
+subscene_image = subscene_image / 255.0
 
 # Load the ONNX model
-model = onnx.load("model_rgb_320_pruned_retrained.onnx")
+# model = onnx.load("model_rgb_320_pruned_retrained.onnx")
+model = onnx.load("unet.onnx")
 
 # Check that the IR is well formed
 onnx.checker.check_model(model)
@@ -41,12 +45,25 @@ result = session.run([output_name], {input_name: subscene_image})
 print("Max value: ", np.max(result))
 print("Min value: ", np.min(result))
 
-# get the layer before the output
-second_from_last_layer = model.graph.node[-3].output[0]
-print("Layer before output: ", second_from_last_layer)
+# convert result to 0-255
+result = np.array(result[0])
+result = np.squeeze(result)
+result = (result > 0.5) * 255
 
-# get the output of the layer before the output
-result = session.run([second_from_last_layer], {input_name: subscene_image})
-# get max and min values of the output
-print("Max value: ", np.max(result))
-print("Min value: ", np.min(result))
+# convert to unint8
+result = result.astype(np.uint8)
+output = Image.fromarray(result)
+output.save('onnx_predict.png')
+
+
+# save the result as image
+
+# # get the layer before the output
+# second_from_last_layer = model.graph.node[-3].output[0]
+# print("Layer before output: ", second_from_last_layer)
+
+# # get the output of the layer before the output
+# result = session.run([second_from_last_layer], {input_name: subscene_image})
+# # get max and min values of the output
+# print("Max value: ", np.max(result))
+# print("Min value: ", np.min(result))
