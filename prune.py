@@ -15,7 +15,7 @@ from finetune import finetune
 from eval import eval_net
 from unet import UNet
 from utils.dataset import UNetDataset 
-
+from utils import get_logger
 
 
 def get_args():
@@ -33,7 +33,7 @@ def get_args():
     parser.add_option('-l', '--load', dest='load',
                       default="checkpoints/best.pt", help='load file model')
     parser.add_option('-r', '--lr', dest='lr', type='float',
-                      default=0.1, help='learning rate for finetuning')
+                      default=0.0001, help='learning rate for finetuning')
     parser.add_option('-i', '--iters', dest='iters', type='int',
                       default=1500, help='number of mini-batches for fine-tuning')
     parser.add_option('-e', '--epochs', dest='epochs', type='int',
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     train_dataset = UNetDataset(im_folder_path=train_im_folder_path, mask_folder_path=train_mask_folder_path, format='image')
     val_dataset = UNetDataset(im_folder_path=val_im_folder_path, mask_folder_path=val_mask_folder_path, format='image')
 
-    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
+    train_dataloader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=4)
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=False, num_workers=4)
 
     # Model Initialization
@@ -85,42 +85,43 @@ if __name__ == '__main__':
         net.load_state_dict(torch.load(args.load))
         log.info('Loading checkpoint from {}...'.format(args.load))
 
+    # # print the net's named_modules
+    # for name, module in net.named_modules():
+    #     print(name, module)
+
     pruner = Pruner(net, args.flops_reg)  # Pruning handler
     criterion = nn.BCELoss()
+    l2_reg_func = nn.MSELoss()
 
     # Ranking on the train dataset
     log.info("Evaluating Taylor criterion for %i mini-batches" % args.taylor_batches)
     with tqdm(total=args.taylor_batches*args.batch_size) as progress_bar:
-        for i, b in enumerate(batch(train, args.batch_size)):
+        for batch_idx, (imgs, true_masks) in enumerate(train_dataloader):
 
             net.zero_grad()  # Zero gradients. DO NOT ACCUMULATE
 
-            # Data & Label
-            imgs = np.array([i[0] for i in b]).astype(np.float32)
-            true_masks = np.array([i[1] for i in b])
-            imgs = torch.from_numpy(imgs)
-            true_masks = torch.from_numpy(true_masks)
             if args.gpu:
                 imgs = imgs.cuda()
                 true_masks = true_masks.cuda()
 
             # Forward pass
-            masks_pred = net(imgs).squeeze()
+            masks_pred = net(imgs)
 
             # Backward pass
             loss = criterion(masks_pred, true_masks)
             loss.backward()
 
             # Compute Taylor rank
-            if i == 0:
+            if batch_idx == 0:
                 log.info("FLOPs before pruning: \n{}".format(pruner.calc_flops()))
             pruner.compute_rank()
 
             # Tracking progress
             progress_bar.update(args.batch_size)
-            if i == args.taylor_batches:  # Stop evaluating after sufficient mini-batches
+            if batch_idx == args.taylor_batches:  # Stop evaluating after sufficient mini-batches
                 log.info("Finished computing Taylor criterion")
                 break
+            break
 
     # Prune & save
     pruner.pruning(args.prune_channels)
@@ -143,18 +144,20 @@ if __name__ == '__main__':
         net.load_state_dict(torch.load(save_file))
         log.info('Re-Loaded checkpoint from {}...'.format(save_file))
 
-    optimizer = optim.SGD(net.parameters(),
-                          lr=args.lr,
-                          momentum=0.9,
-                          weight_decay=0.0005)
+    # optimizer = optim.SGD(net.parameters(),
+    #                       lr=args.lr,
+    #                       momentum=0.9,
+    #                       weight_decay=0.0005)
+    optimizer = optim.Adam(net.parameters(), lr=lr, eps=9.99999993923e-09, betas=(0.899999976158, 0.999000012875))
+
 
     # Use epochs or iterations for fine-tuning
     save_file = osp.join(save_dir, "Finetuned.pth")
 
-    finetune(net, optimizer, criterion, iddataset['train'], log, save_file,
+    finetune(net, optimizer, criterion, l2_reg_func, train_dataset, log, save_file,
              args.iters, args.epochs, args.batch_size, args.gpu, args.scale)
 
-    val_dice = eval_net(net, val,  len(iddataset['val']), args.gpu, args.batch_size)
+    val_dice = eval_net(net, val_dataloader, args.gpu)
     log.info('Validation Dice Coeff: {}'.format(val_dice))
 
 

@@ -6,7 +6,7 @@ from utils import batch, AverageMeter, get_imgs_and_masks
 from flops_counter import flops_count
 
 
-def finetune(net, optimizer, criterion, trainset, log, path, iters=100, epochs=None, batch_size=2, gpu=True, scale=0.5):
+def finetune(net, optimizer, criterion, l2_reg_func, trainset, log, path, iters=100, epochs=None, batch_size=2, gpu=True, scale=0.5):
     net.train()
     bce_meter = AverageMeter()
 
@@ -20,23 +20,21 @@ def finetune(net, optimizer, criterion, trainset, log, path, iters=100, epochs=N
 
     for e in range(epochs):
         # reset the generators
-        train = get_imgs_and_masks(trainset, dir_img, dir_mask, scale)
+        # train = get_imgs_and_masks(trainset, dir_img, dir_mask, scale)
+        train_dataloader = DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=4)
 
-        with tqdm(total=len(trainset)) as progress_bar:
-            for i, b in enumerate(batch(train, batch_size)):
-                imgs = np.array([i[0] for i in b]).astype(np.float32)
-                true_masks = np.array([i[1] for i in b])
-
-                imgs = torch.from_numpy(imgs)
-                true_masks = torch.from_numpy(true_masks)
-
+        with tqdm(total=len(train_dataloader)) as progress_bar:
+            for batch_idx, (imgs, true_masks) in enumerate(train_dataloader):
                 if gpu:
                     imgs = imgs.cuda()
                     true_masks = true_masks.cuda()
 
-                masks_pred = net(imgs).squeeze()
+                masks_pred = net(imgs)
 
-                loss = criterion(masks_pred, true_masks)
+                cse_loss = criterion(masks_pred, true_masks)
+                l2_reg = l2_reg_func(masks_pred, true_masks)
+                loss = cse_loss + l2_reg * 2e-5
+
                 bce_meter.update(loss.item(), batch_size)
 
                 optimizer.zero_grad()

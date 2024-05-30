@@ -36,7 +36,7 @@ class Pruner:
 
         for name, module in self.net.named_modules():
             if isinstance(module, nn.Conv2d):
-                if name != "outconv.conv":  # don't hook final conv module
+                if name != "outconv.2":  # don't hook final conv module
                     module.register_backward_hook(backward_hook_fn)
                     module.register_forward_hook(forward_hook_fn)
                 self.convs.append(module)
@@ -60,6 +60,8 @@ class Pruner:
         channel_layers = []  # layer num for each channel
         layer_channels = []  # channel num wrt layer for each channel
         self.flops[:] = [x / sum(self.flops) for x in self.flops]  # Normalize FLOPs
+        print("self flops length", len(self.flops))
+        print("self ranks length", len(self.ranks))
         for layer, ranks in self.ranks.items():
             # Average across minibatches
             taylor = ranks  # C
@@ -126,6 +128,8 @@ class Pruner:
             self.convs[i].bias.data = c.bias[outchans[i]]
 
         for i, bn in enumerate(self.BNs):
+            print(i, "outchans", outchans[i])
+            print(i, "bn shape", bn.running_mean.shape)
             self.BNs[i].running_mean.data = bn.running_mean[outchans[i]]
             self.BNs[i].running_var.data = bn.running_var[outchans[i]]
             self.BNs[i].weight.data = bn.weight[outchans[i]]
