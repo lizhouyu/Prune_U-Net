@@ -85,9 +85,13 @@ if __name__ == '__main__':
         net.load_state_dict(torch.load(args.load))
         log.info('Loading checkpoint from {}...'.format(args.load))
 
-    # # print the net's named_modules
-    # for name, module in net.named_modules():
-    #     print(name, module)
+    # print the net's named_modules
+    conv_idx = 0
+    for name, module in net.named_modules():
+        if isinstance(module, nn.Conv2d) or isinstance(module, nn.ConvTranspose2d):
+            if name != "outconv.2":
+                print(conv_idx, name, module)
+                conv_idx += 1
 
     pruner = Pruner(net, args.flops_reg)  # Pruning handler
     criterion = nn.BCELoss()
@@ -135,8 +139,14 @@ if __name__ == '__main__':
     pruner.channel_save(save_txt)
     log.info('Pruned channels to {}...'.format(save_txt))
 
+    layer_name_dim_dict = pruner.get_layer_name_dim_dict()
+    save_json = osp.join(save_dir, "pruned_layer_shapes.json")
+    with open(save_json, 'w') as f:
+        json.dump(layer_name_dim_dict, f, indent=4)
+
+
     del net, pruner
-    net = UNet(n_channels=3, n_classes=1, f_channels=save_txt)
+    net = UNet(in_channels=3, out_channels=1, pruned_layer_shape_path=save_json)
     log.info("Re-Built model using {}...".format(save_txt))
     if args.gpu:
         net.cuda()
@@ -148,14 +158,14 @@ if __name__ == '__main__':
     #                       lr=args.lr,
     #                       momentum=0.9,
     #                       weight_decay=0.0005)
-    optimizer = optim.Adam(net.parameters(), lr=lr, eps=9.99999993923e-09, betas=(0.899999976158, 0.999000012875))
+    optimizer = optim.Adam(net.parameters(), lr=args.lr, eps=9.99999993923e-09, betas=(0.899999976158, 0.999000012875))
 
 
     # Use epochs or iterations for fine-tuning
     save_file = osp.join(save_dir, "Finetuned.pth")
 
     finetune(net, optimizer, criterion, l2_reg_func, train_dataset, log, save_file,
-             args.iters, args.epochs, args.batch_size, args.gpu, args.scale)
+             args.iters, args.epochs, args.batch_size, args.gpu)
 
     val_dice = eval_net(net, val_dataloader, args.gpu)
     log.info('Validation Dice Coeff: {}'.format(val_dice))

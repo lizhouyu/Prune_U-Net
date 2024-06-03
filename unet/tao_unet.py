@@ -1,5 +1,7 @@
 import torch
+import json
 import torch.nn as nn
+from functools import reduce
 
 from .tao_unet_blocks import ResDownBlock, ResUpBlock
 
@@ -8,6 +10,7 @@ class UNet(nn.Module
     def __init__(self,
                  in_channels: int = 3, 
                  out_channels: int = 1, 
+                 pruned_layer_shape_path: str = None
                 ) -> None:
         super(UNet, self).__init__()
 
@@ -35,10 +38,38 @@ class UNet(nn.Module
             nn.Conv2d(layer_dim_list[0], out_channels, kernel_size=3, padding=1), # dim: 64 -> 1
             nn.ReLU(inplace=False)
         )
+            
 
         self.activation = nn.ReLU(inplace=False)
 
         self.Sigmoid = nn.Sigmoid()
+
+        if pruned_layer_shape_path is not None:
+            self.load_pruned_layer_shape(pruned_layer_shape_path)
+    
+    def load_pruned_layer_shape(self, pruned_layer_shape_path: str) -> None:
+        with open(pruned_layer_shape_path, 'r') as f:
+            pruned_layer_shape = json.load(f)
+        print("self._modules", self._modules)
+        print("in conv 0", self._modules['inconv'][0])
+        for module_name, module_info in pruned_layer_shape.items():
+            # recursively get the module
+            module_key_list = module_name.split('.')
+            assert len(module_key_list) > 0, f"Invalid module name: {module_name}"
+            module = reduce(getattr, module_key_list, self)
+            if module_info['type'] == 'conv':
+                out_channels = module_info['shape'][0]
+                in_channels = module_info['shape'][1]
+                module.weight.data = module.weight.data[:out_channels, :in_channels, :, :]
+                module.bias.data = module.bias.data[:out_channels]
+            elif module_info['type'] == 'bn':
+                out_channels = module_info['shape'][0]
+                module.weight.data = module.weight.data[:out_channels]
+                module.bias.data = module.bias.data[:out_channels]
+                module.running_mean.data = module.running_mean.data[:out_channels]
+                module.running_var.data = module.running_var.data[:out_channels]
+            else:
+                raise ValueError(f"Unknown module type: {module_info['type']}")
     
     def forward(self, x):
         x = self.inconv(x)

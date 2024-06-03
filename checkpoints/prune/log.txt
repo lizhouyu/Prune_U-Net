@@ -276,3 +276,935 @@
 [05.29.24 14:07:42] Evaluating Taylor criterion for 500 mini-batches
 [05.29.24 14:07:42] FLOPs before pruning: 
 [2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 20:10:07] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 20:10:07] Built model...
+[05.29.24 20:10:07] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 20:10:07] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 20:10:08] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 20:19:57] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 20:19:57] Built model...
+[05.29.24 20:19:57] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 20:19:57] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 20:19:58] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 20:46:51] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 20:46:51] Built model...
+[05.29.24 20:46:51] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 20:46:51] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 20:46:52] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 21:47:54] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 21:47:54] Built model...
+[05.29.24 21:47:54] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 21:47:54] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 21:47:55] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 21:59:47] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 21:59:47] Built model...
+[05.29.24 21:59:47] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 21:59:47] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 21:59:48] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 22:00:04] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 22:00:04] Built model...
+[05.29.24 22:00:05] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 22:00:05] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 22:00:05] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 22:05:53] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 22:05:53] Built model...
+[05.29.24 22:05:53] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 22:05:53] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 22:06:04] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 22:06:55] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 22:06:55] Built model...
+[05.29.24 22:06:56] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 22:06:56] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 22:06:56] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 22:13:50] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 22:13:50] Built model...
+[05.29.24 22:13:50] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 22:13:50] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 22:13:50] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 22:17:30] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 22:17:30] Built model...
+[05.29.24 22:17:31] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 22:17:31] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 22:17:31] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.29.24 22:18:12] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.29.24 22:18:12] Built model...
+[05.29.24 22:18:12] Loading checkpoint from checkpoints/best.pt...
+[05.29.24 22:18:12] Evaluating Taylor criterion for 500 mini-batches
+[05.29.24 22:18:13] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:06:12] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:06:12] Built model...
+[05.30.24 09:06:12] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:06:12] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:06:13] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:06:13] Completed Pruning of 300 channels
+[05.30.24 09:06:13] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:06:13] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:11:02] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:11:02] Built model...
+[05.30.24 09:11:02] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:11:02] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:11:03] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:11:03] Completed Pruning of 300 channels
+[05.30.24 09:11:03] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:11:03] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:11:14] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:11:14] Built model...
+[05.30.24 09:11:15] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:11:15] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:11:15] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:11:15] Completed Pruning of 300 channels
+[05.30.24 09:11:16] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:11:16] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:11:16] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:25:26] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:25:26] Built model...
+[05.30.24 09:25:26] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:25:26] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:25:27] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:25:27] Completed Pruning of 300 channels
+[05.30.24 09:25:27] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:25:27] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:25:27] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:27:34] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:27:34] Built model...
+[05.30.24 09:27:34] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:27:34] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:27:35] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:27:35] Completed Pruning of 300 channels
+[05.30.24 09:27:35] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:27:35] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:27:35] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:29:34] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:29:34] Built model...
+[05.30.24 09:29:35] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:29:35] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:29:35] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:29:35] Completed Pruning of 300 channels
+[05.30.24 09:29:36] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:29:36] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:29:36] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:49:38] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 09:49:38] Built model...
+[05.30.24 09:49:38] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 09:49:38] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 09:49:39] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 09:49:39] Completed Pruning of 300 channels
+[05.30.24 09:49:39] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 09:49:39] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 09:49:39] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:16:09] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:16:10] Built model...
+[05.30.24 11:16:10] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:16:10] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:16:10] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:16:10] Completed Pruning of 300 channels
+[05.30.24 11:16:11] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:16:11] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:16:27] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:16:27] Built model...
+[05.30.24 11:16:27] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:16:27] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:16:28] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:16:28] Completed Pruning of 300 channels
+[05.30.24 11:16:28] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:16:28] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:16:28] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:22:03] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:22:03] Built model...
+[05.30.24 11:22:04] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:22:04] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:22:04] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:22:04] Completed Pruning of 300 channels
+[05.30.24 11:22:05] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:22:05] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:22:05] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:22:27] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:22:27] Built model...
+[05.30.24 11:22:27] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:22:27] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:22:27] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:22:27] Completed Pruning of 300 channels
+[05.30.24 11:22:28] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:22:28] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:22:53] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:22:53] Built model...
+[05.30.24 11:22:53] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:22:53] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:22:54] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:22:54] Completed Pruning of 300 channels
+[05.30.24 11:22:54] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:22:54] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:28:11] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:28:11] Built model...
+[05.30.24 11:28:12] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:28:12] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:28:12] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:28:12] Completed Pruning of 300 channels
+[05.30.24 11:28:13] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:28:13] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:29:11] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:29:11] Built model...
+[05.30.24 11:29:11] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:29:11] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:29:12] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:29:12] Completed Pruning of 300 channels
+[05.30.24 11:29:12] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:29:12] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:29:53] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:29:53] Built model...
+[05.30.24 11:29:53] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:29:53] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:29:54] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:29:54] Completed Pruning of 300 channels
+[05.30.24 11:29:54] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:29:54] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:30:39] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:30:39] Built model...
+[05.30.24 11:30:40] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:30:40] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:30:40] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:30:40] Completed Pruning of 300 channels
+[05.30.24 11:30:41] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:30:41] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:47:38] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:47:38] Built model...
+[05.30.24 11:47:38] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:47:38] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:47:39] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:47:39] Completed Pruning of 300 channels
+[05.30.24 11:47:39] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:47:39] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:47:57] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:47:57] Built model...
+[05.30.24 11:47:57] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:47:57] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:47:57] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:47:57] Completed Pruning of 300 channels
+[05.30.24 11:47:58] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:47:58] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:48:49] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:48:49] Built model...
+[05.30.24 11:48:49] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:48:49] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:48:50] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:48:50] Completed Pruning of 300 channels
+[05.30.24 11:48:50] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:48:50] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:48:58] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:48:59] Built model...
+[05.30.24 11:48:59] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:48:59] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:48:59] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:48:59] Completed Pruning of 300 channels
+[05.30.24 11:49:00] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:49:00] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:50:25] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:50:25] Built model...
+[05.30.24 11:50:25] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:50:25] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:50:26] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:50:26] Completed Pruning of 300 channels
+[05.30.24 11:50:26] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:50:26] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:53:05] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:53:05] Built model...
+[05.30.24 11:53:05] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:53:05] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:53:05] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:53:06] Completed Pruning of 300 channels
+[05.30.24 11:53:06] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:53:06] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:53:19] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:53:19] Built model...
+[05.30.24 11:53:19] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:53:19] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:53:20] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:53:20] Completed Pruning of 300 channels
+[05.30.24 11:53:20] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:53:20] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:53:20] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:53:20] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[05.30.24 11:54:03] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:54:03] Built model...
+[05.30.24 11:54:04] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:54:04] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:54:04] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:54:04] Completed Pruning of 300 channels
+[05.30.24 11:54:04] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:54:04] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:54:05] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:54:05] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[05.30.24 11:54:32] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:54:33] Built model...
+[05.30.24 11:54:33] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:54:33] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:54:33] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:54:33] Completed Pruning of 300 channels
+[05.30.24 11:54:34] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:54:34] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:54:34] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:54:34] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[05.30.24 11:54:51] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 11:54:51] Built model...
+[05.30.24 11:54:52] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 11:54:52] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 11:54:52] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 11:54:52] Completed Pruning of 300 channels
+[05.30.24 11:54:53] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 11:54:53] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:54:53] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 11:54:53] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[05.30.24 20:19:18] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 20:19:18] Built model...
+[05.30.24 20:19:18] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 20:19:18] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 20:19:18] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 20:19:18] Completed Pruning of 300 channels
+[05.30.24 20:19:19] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 20:19:19] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 20:19:19] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 20:19:19] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[05.30.24 20:49:48] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 20:49:48] Built model...
+[05.30.24 20:49:48] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 20:49:48] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 20:49:49] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 20:50:35] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 20:50:35] Built model...
+[05.30.24 20:50:35] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 20:50:35] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 20:50:36] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 20:50:36] Completed Pruning of 300 channels
+[05.30.24 20:50:36] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 20:50:36] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 20:50:36] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 20:50:36] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[05.30.24 21:41:59] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 21:41:59] Built model...
+[05.30.24 21:42:11] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[05.30.24 21:42:11] Built model...
+[05.30.24 21:42:11] Loading checkpoint from checkpoints/best.pt...
+[05.30.24 21:42:11] Evaluating Taylor criterion for 500 mini-batches
+[05.30.24 21:42:12] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 102400, 230400, 230400, 25600, 230400, 460800, 25600, 460800, 460800, 51200, 460800, 921600, 51200, 3686400, 3686400, 409600, 3686400, 7372800, 409600, 29491200, 29491200, 3276800, 22118400, 11059200, 7372800, 14745600]
+[05.30.24 21:42:12] Completed Pruning of 300 channels
+[05.30.24 21:42:12] Saving pruned to checkpoints/prune/Pruned.pth...
+[05.30.24 21:42:12] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[05.30.24 21:42:12] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[05.30.24 21:42:12] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[06.02.24 23:21:59] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:21:59] Built model...
+[06.02.24 23:21:59] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:21:59] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:25:04] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:25:04] Built model...
+[06.02.24 23:25:04] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:25:04] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:26:04] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:26:04] Built model...
+[06.02.24 23:26:04] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:26:04] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:26:48] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:26:48] Built model...
+[06.02.24 23:26:49] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:26:49] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:27:34] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:27:34] Built model...
+[06.02.24 23:27:35] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:27:35] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:29:30] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:29:30] Built model...
+[06.02.24 23:29:30] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:29:30] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:29:36] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:29:36] Built model...
+[06.02.24 23:29:36] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:29:36] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:40:23] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:40:23] Built model...
+[06.02.24 23:40:23] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:40:23] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:40:24] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 921600, 460800, 460800, 921600, 921600, 7372800, 5529600, 11059200, 7372800, 14745600]
+[06.02.24 23:41:12] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:41:12] Built model...
+[06.02.24 23:41:12] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:41:12] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:41:13] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 921600, 460800, 460800, 921600, 921600, 7372800, 5529600, 11059200, 7372800, 14745600]
+[06.02.24 23:41:13] Completed Pruning of 300 channels
+[06.02.24 23:41:13] Saving pruned to checkpoints/prune/Pruned.pth...
+[06.02.24 23:41:13] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[06.02.24 23:41:14] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[06.02.24 23:41:14] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...
+[06.02.24 23:51:16] Args: {
+    "batch_size": 2,
+    "epochs": null,
+    "flops_reg": 0.001,
+    "gpu": false,
+    "iters": 1500,
+    "load": "checkpoints/best.pt",
+    "lr": 0.0001,
+    "prune_channels": 300,
+    "taylor_batches": 500
+}
+[06.02.24 23:51:16] Built model...
+[06.02.24 23:51:16] Loading checkpoint from checkpoints/best.pt...
+[06.02.24 23:51:16] Evaluating Taylor criterion for 500 mini-batches
+[06.02.24 23:51:17] FLOPs before pruning: 
+[2764800, 14745600, 3686400, 921600, 460800, 460800, 921600, 921600, 7372800, 5529600, 11059200, 7372800, 14745600]
+[06.02.24 23:51:17] Completed Pruning of 300 channels
+[06.02.24 23:51:17] Saving pruned to checkpoints/prune/Pruned.pth...
+[06.02.24 23:51:17] Pruned channels to checkpoints/prune/pruned_channels.txt...
+[06.02.24 23:51:17] Re-Built model using checkpoints/prune/pruned_channels.txt...
+[06.02.24 23:51:17] Re-Loaded checkpoint from checkpoints/prune/Pruned.pth...

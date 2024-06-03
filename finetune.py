@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+from torch.utils.data import DataLoader
 
 from tqdm import tqdm
 from utils import batch, AverageMeter, get_imgs_and_masks
@@ -43,10 +44,10 @@ def finetune(net, optimizer, criterion, l2_reg_func, trainset, log, path, iters=
                 progress_bar.update(batch_size)
                 progress_bar.set_postfix(epoch=e, BCE=bce_meter.avg)
 
-                if i == 0 and e == 0:
+                if batch_idx == 0 and e == 0:
                     log.info("FLOPs after pruning: \n{}".format(flops_count(net, imgs.shape[2:])))
 
-                if i == iters:  # Stop finetuning after sufficient mini-batches
+                if batch_idx == iters:  # Stop finetuning after sufficient mini-batches
                     break
 
     log.info("Finished finetuning")
