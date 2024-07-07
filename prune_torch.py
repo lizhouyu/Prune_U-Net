@@ -15,7 +15,7 @@ assert os.path.exists(input_file_path), f"Invalid input file path: {input_file_p
 
 # set the output file path
 output_folder_path = "checkpoints/prune"
-output_file_path = os.path.join(output_folder_path, 'unet_pruned_l1_30.pt')
+output_file_path = os.path.join(output_folder_path, 'unet_pruned_l1_90.pt')
 os.makedirs(output_folder_path, exist_ok=True)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -50,7 +50,7 @@ for name, module in model.named_modules():
 prune.global_unstructured(
     parameters_to_prune,
     pruning_method=prune.L1Unstructured, # L1 pruning
-    amount=0.8, # 80% sparsity
+    amount=0.9, # 80% sparsity
 )
 
 print("Pruning complete")

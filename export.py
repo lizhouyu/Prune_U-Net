@@ -9,7 +9,12 @@ device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cp
 print("device: ", device)
 
 # set model path 
-model_path = 'checkpoints/best.pt'
+# model_path = 'checkpoints/best.pt'
+model_path = 'checkpoints/prune/unet_pruned_l1_80.pt'
+
+# set output path
+# output_path = 'unet.onnx'
+output_path = 'unet_pruned_l1_80.onnx'
 
 # load model
 model = UNet(in_channels=3, out_channels=1)
@@ -22,4 +27,4 @@ input_names = ["in"]
 output_names = ["out"]
 dynamic_axes = {'in': {0: 'batch'}, 'out': {0: 'batch'}}
 
-torch.onnx.export(model, dummy_input, "unet.onnx", verbose=False, input_names=input_names, output_names=output_names, dynamic_axes=dynamic_axes)
+torch.onnx.export(model, dummy_input, output_path, verbose=False, input_names=input_names, output_names=output_names, dynamic_axes=dynamic_axes)

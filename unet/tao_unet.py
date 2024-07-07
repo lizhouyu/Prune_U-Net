@@ -102,11 +102,12 @@ class UNet(nn.Module
 
         out = self.outconv(up1) # dim: 64 -> out_channels
         out = self.Sigmoid(out)
-        return out
+        return out, down4
 
 
 if __name__ == '__main__':
     model = UNet(out_channels=2)
     x = torch.randn(1, 3, 512, 512)
-    y = model(x)
-    print(y.shape)
+    y0, y1 = model(x)
+    print(y0.shape)
+    print(y1.shape)

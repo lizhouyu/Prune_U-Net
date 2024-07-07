@@ -100,7 +100,7 @@ def train_net(net,
             loss.backward()
             optimizer.step()
 
-            pbar.set_postfix(loss=loss.item() / true_masks.size(0)
+            pbar.set_postfix(loss=loss.item() / true_masks.size(0))
             pbar.update(1)
 
         print('Epoch finished ! Loss: {}'.format(epoch_loss / len(train_dataset)))
