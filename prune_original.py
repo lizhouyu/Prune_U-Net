@@ -26,7 +26,7 @@ def get_args():
                       type='int', help='batch size')
     parser.add_option('-t', '--taylor_batches', dest='taylor_batches', default=500,
                       type='int', help='number of mini-batches used to calculate Taylor criterion')
-    parser.add_option('-p', '--prune_channels', dest='prune_channels', default=300,
+    parser.add_option('-p', '--prune_channels', dest='prune_channels', default=2944,
                       type='int', help='number of channels to remove')
     parser.add_option('-g', '--gpu', action='store_true', dest='gpu',
                       default=False, help='use cuda')
@@ -35,7 +35,7 @@ def get_args():
     parser.add_option('-r', '--lr', dest='lr', type='float',
                       default=0.0001, help='learning rate for finetuning')
     parser.add_option('-i', '--iters', dest='iters', type='int',
-                      default=1500, help='number of mini-batches for fine-tuning')
+                      default=10, help='number of mini-batches for fine-tuning')
     parser.add_option('-e', '--epochs', dest='epochs', type='int',
                       default=None, help='number of epochs for final finetuning')
     parser.add_option('-f', '--flops', dest='flops_reg', type='float',
